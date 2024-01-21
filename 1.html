@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function a(str) {
+            let words = str.split(' ');
+            let x = [];
+            let max = 0;
+            for (let i = 0; i < words.length; i++) {
+                if (words[i].length > max) {
+                max = words[i].length;
+                x = [words[i]];
+                }else if (words[i].length === max) {
+                x.push(words[i]);
+                }
+            }
+            let long = x[0];
+            let length = long.length;
+            return `${long} ${length}`;
+        }
+        console.log(a("The quick brown fox jumped over the lazy dog"));
+    </script>
+</body>
+</html>
